@@ -65,4 +65,52 @@ public class ListaEncadeada {
 		}
 	}
 	
+	public void deletePrimeiro() {
+		if(vazia())
+			return;
+		inicio = inicio.getProx();
+	}
+	
+	public void deleteUltimo() {
+		if(vazia())
+			return;
+		Nodo aux = inicio;
+		if(inicio.getProx() == null) {
+			inicio = null;
+			return;
+		}
+		while(aux.getProx().getProx() != null) {
+			aux = aux.getProx();
+		}
+		aux.setProx(null);
+	}
+	
+	public void contaNodos() {
+		int cont = 0;
+		Nodo aux = inicio;
+		while(aux != null) {
+			cont++;
+			aux = aux.getProx();
+		}
+		System.out.println("A quantidade total de nodos é " + cont);
+	}
+	
+	public void procuraValor(int valor) {
+		if(vazia()) {
+			System.out.println("A lista está vazia.");
+			return;
+		}
+		int cont = 1;
+		Nodo aux = inicio;
+		while(aux != null) {
+			if(aux.getDado() == valor) {
+				System.out.println("O valor " + valor + " está na posição " + cont + " da lista.");
+				return;
+			}
+			cont++;
+			aux = aux.getProx();
+		}
+		System.out.println("O valor " + valor + " não se encontra na lista.");
+	}
+	
 }

@@ -36,5 +36,37 @@ public class Main {
 		lista.inserirFinal(8);
 		lista.mostraLista();
 		
+		lista.inserirFinal(5);
+		/*
+		lista.deleteComValor(4);
+		lista.deleteComValor(7);
+		lista.deleteComValor(8);
+		lista.deleteComValor(5);
+		*/
+		lista.mostraLista();
+		
+		lista.contaNodos();
+		
+		lista.deletePrimeiro();
+		lista.mostraLista();
+		
+		lista.deleteUltimo();
+		lista.mostraLista();
+		
+		lista.inserirInicio(4);
+		lista.inserirFinal(5);
+		lista.mostraLista();
+		
+		lista.procuraValor(8);
+		
+		/*
+		lista.deletePrimeiro();
+		lista.deletePrimeiro();
+		lista.deletePrimeiro();
+		lista.mostraLista();
+		
+		lista.deleteUltimo();
+		lista.mostraLista();
+		*/
 	}
 }
