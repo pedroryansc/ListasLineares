@@ -21,5 +21,15 @@ public class MainCircular {
 		
 		lista.buscarValor(10);
 		
+		lista.deleteComValor(10);
+		lista.deleteComValor(2);
+		lista.deleteComValor(8);
+		lista.deleteComValor(4);
+		System.out.println("Lista: " + lista.mostrarLista());
+		
+		lista.inserirFinal(5);
+		lista.inserirFinal(7);
+		System.out.print(lista.mostrarLista());
+		
 	}
 }

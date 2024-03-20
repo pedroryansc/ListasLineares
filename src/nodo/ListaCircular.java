@@ -52,6 +52,8 @@ public class ListaCircular {
 		Nodo aux = inicio;
 		do {
 			if(aux.getProx().getDado() == dado) {
+				if(aux.getProx() == fim)
+					fim = aux;
 				aux.setProx(aux.getProx().getProx());
 				return;
 			}
